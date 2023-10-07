@@ -9,6 +9,11 @@
     text-decoration: none;
     white-space: nowrap;
 
+    &--canceled {
+        text-decoration: line-through;
+        cursor: not-allowed;
+    }
+
 
     &--primary {
         background-color: variables.$purple;
