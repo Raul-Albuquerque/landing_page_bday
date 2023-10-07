@@ -1,5 +1,9 @@
 @use 'variables';
 @use 'hero';
+@use './components/infos_bar';
+@use './components/buttons';
+@use 'event';
+@use 'menu';
 
 * {
     margin: 0;
@@ -25,8 +29,6 @@
 @mixin title($fontSize: 42px) {
     font-family: 'Pacifico', cursive;
     font-size: $fontSize;
-    line-height: 42px;
-    letter-spacing: 2px;
 }
 
 .title {
@@ -35,12 +37,10 @@
 
 .title--small {
     @include title(36px);
-    line-height: 36px;
 }
 
 @mixin text ($fontSize: 24px) {
     font-size: $fontSize;
-    line-height: 24px;
 }
 
 .text {
@@ -49,5 +49,27 @@
 
 .text--small {
     @include text(18px);
-    line-height: 18px;
+}
+
+.bg-section {
+    background-color: variables.$grey;
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .title {
+        @include title(32px)
+    }
+    
+    .title--small {
+        @include title(24px);
+    }
+    
+    .text {
+        @include text(22px);
+    }
+    
+    .text--small {
+        @include text(16px);
+    }
 }

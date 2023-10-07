@@ -1,0 +1,25 @@
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+
+    &__list {
+
+        .text--small {
+            font-weight: bold;
+        }
+
+        &__itens {
+
+            &__item {
+                margin-bottom: 8px;
+                list-style: inside;
+
+                @media (max-width: 1024px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
