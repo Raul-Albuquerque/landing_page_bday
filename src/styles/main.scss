@@ -1,0 +1,53 @@
+@use 'variables';
+@use 'hero';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 640px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 90%;
+    }
+}
+
+@mixin title($fontSize: 42px) {
+    font-family: 'Pacifico', cursive;
+    font-size: $fontSize;
+    line-height: 42px;
+    letter-spacing: 2px;
+}
+
+.title {
+    @include title
+}
+
+.title--small {
+    @include title(36px);
+    line-height: 36px;
+}
+
+@mixin text ($fontSize: 24px) {
+    font-size: $fontSize;
+    line-height: 24px;
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(18px);
+    line-height: 18px;
+}
