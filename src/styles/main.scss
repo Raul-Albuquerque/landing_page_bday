@@ -12,6 +12,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 960px;
     width: 100%;
